@@ -1,0 +1,17 @@
+Settings
+	Get jssusername and jsspassword
+	Get jss server
+	certificate file if needed
+
+Write date of last JSS access. Use existing JSS data or not.
+	If not exist
+		
+		Get JSS Groups. Display which groups. Write to file groups.xml or parse?
+		Cycle through each machine to get IP addresses, usernames, and full names. Write to file or parse first
+	else 
+		Print out already cycled information
+
+Provide fields to search by full name, username, and computer name.
+
+Select multiple computers and add to ARD list
+

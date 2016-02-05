@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+import requests
+import getpass
+from lxml import etree
+from io import StringIO, BytesIO
+
+#### Code to get information and save to jss.xml file
+	##User info
+	##username = raw_input("Username: ")
+	#username = 'c019902'
+	#password = getpass.getpass()
+	##JSS info
+	#jss = 'https://jssadmin:8443/JSSResource/'
+	#op = '/computers/'
+	#
+	##Calls 'computers' operation from JSS API, and prints status code
+	#r = requests.get(jss + op, auth=(username, password), verify='/Users/c019902/jss.pem')
+	#print r.status_code
+	#
+	##saves request to xml variable and then saves to jss.xml
+	#xml = r.text
+	#with open("jss.xml","w")as f:
+	#	f.write(xml)
+	#
+
+# Base JSS request class
+class call(object):
+	def __init__(self, username, password, operation):
+		myjss = 'https://jssadmin:8443/JSSResource/'
+		r = requests.get(myjss + operation)
+
+with open("jss.xml", "r+") as f:
+	xml = f.read()
+
+root = etree.fromstring(xml)
+print etree.tostring(root)
